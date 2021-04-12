@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4019462348634475252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4019462348634475257}
+  - component: {fileID: 4019462348634475255}
+  - component: {fileID: 4019462348634475256}
+  - component: {fileID: 4019462348634475259}
+  - component: {fileID: 4019462348634475254}
+  - component: {fileID: 4019462348634475258}
+  - component: {fileID: 4019462348634475261}
+  - component: {fileID: 4019462348634475260}
+  - component: {fileID: 4019462348634475263}
+  - component: {fileID: 4019462348634475233}
+  - component: {fileID: 4019462348634475262}
+  m_Layer: 0
+  m_Name: Game Management
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4019462348634475257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4019462348634475255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27e859b67b4b29459003214273be20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Command_Sequence:
+    delayMS: 0
+  Command_Limiter:
+    Action_Points: 0
+--- !u!114 &4019462348634475256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1d644d27b28c4197bea635b61a1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battle_Collider: {fileID: 5164720179750483837, guid: 40f973617e20259439cf1c6c85ad6945, type: 3}
+  battle_Collider_Pool: {fileID: 0}
+  Battle_Order_Manager: {fileID: 11400000, guid: 5967a0c518ce2314cb833ef8778a52d3, type: 2}
+--- !u!114 &4019462348634475259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dfc9407abab5a468c5528e30978eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event_Listener:
+    Events:
+    - {fileID: 11400000, guid: 2db51e50dc11fa14b9bc4f2804a53185, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4019462348634475256}
+          m_TargetAssemblyTypeName: Assets.Battles.Battle_Controller, Assembly-CSharp
+          m_MethodName: Spawn_Battle_Colllider
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    Delay_Time_In_Seconds: 0
+    Execution_Order: 0
+--- !u!114 &4019462348634475254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dfc9407abab5a468c5528e30978eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event_Listener:
+    Events:
+    - {fileID: 11400000, guid: 2db51e50dc11fa14b9bc4f2804a53185, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 5967a0c518ce2314cb833ef8778a52d3, type: 2}
+          m_TargetAssemblyTypeName: Assets.Battles.Battle_Order_Manager, Assembly-CSharp
+          m_MethodName: Start_Battle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    Delay_Time_In_Seconds: 0.1
+    Execution_Order: 10
+--- !u!114 &4019462348634475258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91f854ae61dde54096d0080f5f4cacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Battle_Order_Manager: {fileID: 11400000, guid: 5967a0c518ce2314cb833ef8778a52d3, type: 2}
+  team_Color: {r: 1, g: 0.069811285, b: 0.069811285, a: 0}
+--- !u!114 &4019462348634475261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47efc7d29e0d769408e3553fab925366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player_Controller: {fileID: 11400000, guid: 1f51047aa8fb5be46836bca851431fce, type: 2}
+  Input_State: 0
+--- !u!114 &4019462348634475260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30069fa209b9722478df8cb56d62d57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cur_Mouse_Position: {x: 0, y: 0, z: 0}
+  player_Controller: {fileID: 11400000, guid: 1f51047aa8fb5be46836bca851431fce, type: 2}
+  queue_Component: {fileID: 0}
+  movement_Component: {fileID: 0}
+  traversal_Index: 0
+  Body_Component: {fileID: 0}
+  Move_Window: {fileID: 0}
+--- !u!114 &4019462348634475263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dfc9407abab5a468c5528e30978eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event_Listener:
+    Events:
+    - {fileID: 11400000, guid: f82ce3552f03e114193682905438c317, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4019462348634475260}
+          m_TargetAssemblyTypeName: Raspberry.Movement.Player_Input, Assembly-CSharp
+          m_MethodName: Set_Unit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    Delay_Time_In_Seconds: 0
+    Execution_Order: 0
+--- !u!114 &4019462348634475233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a914f5eeb5880214793a32b1e0ad6963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battle_Order_Manager: {fileID: 11400000, guid: 5967a0c518ce2314cb833ef8778a52d3, type: 2}
+  Player_Controller: {fileID: 11400000, guid: 1f51047aa8fb5be46836bca851431fce, type: 2}
+--- !u!114 &4019462348634475262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019462348634475252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dfc9407abab5a468c5528e30978eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event_Listener:
+    Events:
+    - {fileID: 11400000, guid: f82ce3552f03e114193682905438c317, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4019462348634475233}
+          m_TargetAssemblyTypeName: Set_Player_Controller, Assembly-CSharp
+          m_MethodName: Set_Unit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    Delay_Time_In_Seconds: 0.1
+    Execution_Order: 1

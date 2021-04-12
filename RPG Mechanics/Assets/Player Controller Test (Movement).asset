@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975f39a52f0a4db4493e00fd9f517755, type: 3}
+  m_Name: Player Controller Test (Movement)
+  m_EditorClassIdentifier: 
+  Current_Unit: {fileID: 0}
+  queue_Component: {fileID: 0}
+  movement_Component: {fileID: 0}
+  Targeting_Component: {fileID: 0}
+  Current_Unit_Event: {fileID: 0}
+  order_Manager: {fileID: 0}
+  Command_Type: 0
